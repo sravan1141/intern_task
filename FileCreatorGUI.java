@@ -8,13 +8,11 @@ import java.io.IOException;
 
 public class FileCreatorGUI {
     public static void main(String[] args) {
-        // Create the main frame
         JFrame frame = new JFrame("File Creator");
         frame.setSize(400, 350);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridLayout(5, 2, 5, 5));
 
-        // Create components
         JLabel typeLabel = new JLabel("File Type:");
         JTextField typeField = new JTextField();
 
@@ -30,7 +28,7 @@ public class FileCreatorGUI {
 
         JButton saveButton = new JButton("Save File");
 
-        // Action listener for save button
+
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -57,7 +55,6 @@ public class FileCreatorGUI {
             }
         });
 
-        // Add components to frame
         frame.add(typeLabel);
         frame.add(typeField);
         frame.add(nameLabel);
@@ -69,7 +66,6 @@ public class FileCreatorGUI {
         frame.add(new JLabel()); // Empty placeholder
         frame.add(saveButton);
 
-        // Set frame visibility
         frame.setVisible(true);
     }
 }
